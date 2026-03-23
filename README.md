@@ -37,7 +37,7 @@ Cleaned the raw data to ensure accuracy and consistency:
 
 | Issue | Action Taken |
 |---|---|
-| Negative or zero quantities | Removed (returns and data errors) |
+| Negative or zero quantities | Removed |
 | Negative unit prices | Removed |
 | Cancelled invoices (InvoiceNo starting with "C") | Excluded |
 | Missing CustomerID | Rows dropped |
