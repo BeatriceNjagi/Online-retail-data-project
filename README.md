@@ -31,7 +31,7 @@ Loaded the raw Excel dataset into Python and performed an initial inspection:
 ---
 
 
-### Phase 2 — Data Cleaning & Transformation $ Data Storage (SQL Layer)
+### Phase 2 — Data Cleaning & Transformation & Data Storage (SQL Layer)
 
 Cleaned the raw data to ensure accuracy and consistency:
 
