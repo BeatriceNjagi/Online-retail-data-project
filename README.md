@@ -43,7 +43,7 @@ Cleaned the raw data to ensure accuracy and consistency:
 | Missing CustomerID | Rows dropped |
 | Duplicate records | Removed |
 
-- Loaded the cleaned dataset into a SQL table using SQLAlchemy for transparency and reproducibility
+- Both raw and cleaned datasets were stored as separate SQL tables for transparency and reproducibility.
 - Verified table creation, data types, and row counts
 
 
