@@ -8,8 +8,6 @@ An end-to-end data analysis project covering data ingestion, cleaning, SQL stora
 
 This project analyses transactional retail data to answer key business questions around revenue performance, customer behaviour, and global product demand. The workflow follows a full data pipeline — from raw data loading through to cleaned analysis and insights.
 
-**Dataset:** UCI Online Retail Dataset (transactions from a UK-based retailer, 2011)
-
 ---
 
 ## Tools Used
@@ -18,7 +16,6 @@ This project analyses transactional retail data to answer key business questions
 - **Pandas** — data manipulation and transformation
 - **PostgreSQL** — data storage and querying
 - **SQLAlchemy** — connecting Python to the SQL database
-- **Matplotlib / Seaborn** — visualisation
 
 ---
 
@@ -29,22 +26,12 @@ This project analyses transactional retail data to answer key business questions
 Loaded the raw Excel dataset into Python and performed an initial inspection:
 
 - Reviewed structure using `.head()`, `.shape()`, `.describe()`, and `.info()`
-- Converted `InvoiceDate` to datetime format
 - Confirmed correct data types across all fields
 
 ---
 
-### Phase 2 — Data Storage (SQL Layer)
 
-Set up a PostgreSQL database to store and query the data:
-
-- Designed a schema with fields: `InvoiceNo`, `StockCode`, `Description`, `Quantity`, `InvoiceDate`, `UnitPrice`, `CustomerID`, `Country`
-- Loaded the raw dataset into a SQL table using SQLAlchemy
-- Verified table creation, data types, and row counts
-
----
-
-### Phase 3 — Data Cleaning & Transformation
+### Phase 2 — Data Cleaning & Transformation $ Data Storage (SQL Layer)
 
 Cleaned the raw data to ensure accuracy and consistency:
 
@@ -56,11 +43,9 @@ Cleaned the raw data to ensure accuracy and consistency:
 | Missing CustomerID | Rows dropped |
 | Duplicate records | Removed |
 
-New fields created:
-- `Revenue` = Quantity × UnitPrice
-- `Month`, `Year`, `Day` extracted from `InvoiceDate`
+- Loaded the cleaned dataset into a SQL table using SQLAlchemy for transparency and reproducibility
+- Verified table creation, data types, and row counts
 
-Both raw and cleaned datasets were stored as separate SQL tables for transparency and reproducibility.
 
 ---
 
@@ -107,5 +92,3 @@ Both raw and cleaned datasets were stored as separate SQL tables for transparenc
 4. **Re-engage low-spending customers** — identify customers with minimal purchases and design targeted campaigns to increase lifetime value
 
 ---
-
-*Analysis by [Beatrice Njagi](https://github.com/BeatriceNjagi)*
